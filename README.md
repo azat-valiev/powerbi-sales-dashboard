@@ -1,2 +1,127 @@
-# powerbi-sales-dashboard
-Final project for the PowerBI training module on analysing online store performance.
+# Power BI Project — Sales & Order Analytics Dashboard
+
+## 📊 Project Overview
+This repository contains a **Power BI dashboard** designed to analyze sales performance, order lifecycle, and customer activity.
+
+The report provides a high-level business overview as well as detailed analytics across time, product categories, and operational stages of the order funnel.
+
+The project focuses on:
+- revenue and sales dynamics
+- order funnel performance
+- customer activity and conversion
+- pipeline value monitoring
+
+---
+
+## 🎯 Project Objectives
+- Monitor key sales and operational KPIs in one dashboard
+- Analyze revenue trends over time and versus last year
+- Track order funnel efficiency from creation to delivery
+- Provide flexible filtering by time and product attributes
+
+---
+
+## 🧱 Data Model
+The data model is built using **star schema principles**.
+
+### Fact Tables
+- `orders`
+- `order_items`
+- `order_payments`
+- `order_reviews`
+
+### Dimension Tables
+- `Calendar`
+- `customers`
+- `products`
+- `sellers`
+- `FunnelLabels`
+- `Random_Review`
+- `WeightBandTable`
+
+---
+
+## 🧮 Key Metrics (DAX)
+
+### Sales Metrics
+- **Revenue** — total sales amount  
+- **Revenue Over Time** — revenue trend by date  
+- **Revenue SPLY** — revenue for the same period last year  
+- **Revenue MoM** — month-over-month revenue change  
+- **Revenue by Category** — revenue split by product category  
+
+- **Average Check** — average order value  
+
+---
+
+### Order Metrics
+- **Orders Created** — total number of created orders  
+- **Orders Approved** — approved orders  
+- **Orders Shipped** — shipped orders  
+- **Orders Delivered** — delivered orders  
+
+- **Delivered Orders Over Time** — delivery trend  
+- **Delivered Orders MoM** — month-over-month delivered orders change  
+
+---
+
+### Funnel Metrics
+- **Order Funnel**
+  - Orders Created
+  - Orders Approved
+  - Orders Shipped
+  - Orders Delivered
+
+- **Conversion** — order funnel conversion rate  
+
+---
+
+### Customer Metrics
+- **Active Customers** — number of customers with activity in selected period  
+
+---
+
+### Pipeline Metrics
+- **Pipeline Value** — total value of orders currently in pipeline  
+
+---
+
+## 📐 Report Pages
+
+### Sales Overview
+- Revenue
+- Average Check
+- Conversion Rate
+- Active Customers
+- Pipeline Value
+- Revenue trends and YoY comparison
+- Revenue by product category
+
+### Order Funnel
+- Order lifecycle from creation to delivery
+- Funnel stage comparison
+- Operational performance monitoring
+
+---
+
+## 🔄 Data Refresh
+- Data source: structured transactional datasets
+- Refresh mode: manual (can be extended to scheduled refresh)
+- Designed for Power BI Service deployment
+
+---
+
+## 🔐 Security
+The model is ready for **Row-Level Security (RLS)** implementation  
+(e.g. access restriction by category, region, or seller).
+
+---
+
+## 🛠 Tools & Technologies
+- Power BI Desktop
+- DAX
+- Power Query (M)
+
+---
+
+## 📁 Repository Structure
